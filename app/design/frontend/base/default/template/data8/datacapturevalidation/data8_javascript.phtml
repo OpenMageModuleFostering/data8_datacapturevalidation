@@ -42,13 +42,20 @@
 
 <?php } ?>
 
+<?php if (Mage::getStoreConfig('Data8/Data8_group/Data8_usePredictiveAddress',Mage::app()->getStore())) { ?>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="https://webservices.data-8.co.uk/javascript/loader.ashx?key=<?php echo Mage::getStoreConfig('Data8/Data8_group/Data8_key',Mage::app()->getStore()); ?>&load=AddressCapture,EmailValidation,TelephoneValidation,USTelephoneValidation,PredictiveAddress,InternationalTelephoneValidation,CountryDetection"></script>
+<script type="text/javascript" src="https://webservices.data-8.co.uk/javascript/predictiveaddress.js"></script>
+<link type="text/css" rel="stylesheet" href="https://webservices.data-8.co.uk/content/predictiveaddress.css"></link>
+<link type="text/css" rel="stylesheet" href="https://webservices.data-8.co.uk/content/jquery-ui_predictive-address.css"></link>
+<script type="text/javascript">
+  data8.usePredictiveAddress = true;
+</script>
+<div class="PredictiveAddressUIContainer"></div>
+<?php } ?>
+
 <script type='text/javascript'>
 
-  var s = document.createElement('script');
-  s.type = 'text/javascript';
-  s.src = 'https://webservices.data-8.co.uk/javascript/loader.ashx?key=<?php echo Mage::getStoreConfig('Data8/Data8_group/Data8_key',Mage::app()->getStore()); ?>&load=AddressCapture,EmailValidation,TelephoneValidation,USTelephoneValidation';
-  document.getElementsByTagName('head')[0].appendChild(s);
-  
 <?php if (Mage::getStoreConfig('Data8/Data8_group/Data8_license',Mage::app()->getStore()) != 'None') { ?>
   new data8.magentoPostcodeLookupButton(
     [

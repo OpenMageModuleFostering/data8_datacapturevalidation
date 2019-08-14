@@ -56,6 +56,37 @@ data8.magentoPostcodeLookupButton.prototype.show = function () {
     if (!this.valid)
         return;
 
+    if (data8.usePredictiveAddress) {
+        var fieldsWithoutOrg = [];
+        var line1Element = null;
+
+        for (var i = 0; i < this.fields.length; i++) {
+            if (this.fields[i].field == 'organisation') {
+                d8jQuery(document.getElementById(this.fields[i].element)).predictiveaddressui({
+                    fields: this.fields,
+                    defaultCountry: 'GB',
+                    appendTo: '.PredictiveAddressUIContainer'
+                });
+            }
+            else {
+                fieldsWithoutOrg.push(this.fields[i]);
+
+                if (this.fields[i].field == 'line1') {
+                    line1Element = this.fields[i].element;
+                }
+            }
+        }
+
+        d8jQuery(document.getElementById(line1Element)).predictiveaddressui({
+            fields: fieldsWithoutOrg,
+            separateOrganisation: true,
+            defaultCountry: 'GB',
+            appendTo: '.PredictiveAddressUIContainer'
+        });
+
+        return;
+    }
+
     data8.postcodeLookupButton.prototype.show.call(this);
 
     for (var i = 0; i < this.fields.length; i++) {

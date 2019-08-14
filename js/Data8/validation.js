@@ -35,22 +35,13 @@ data8.telephoneValidator = {
                 var country = countryElement.value;
                 e.target.data8_telephone_validation_result = null;
 
-                if (value && country == 'GB') {
-                    var proxy = new data8.telephonevalidation();
-                    proxy.isvalidsimple(value, function (result) {
+                if (value) {
+                    var proxy = new data8.internationaltelephonevalidation();
+                    proxy.isvalidsimple(value, country, function (result) {
                         if (!result.Status.Success)
                             e.target.data8_telephone_validation_result = true;
                         else
-                            e.target.data8_telephone_validation_result = result.Result;
-                    });
-                }
-                else if (value && (country == 'US' || country == 'CA')) {
-                    var proxy = new data8.ustelephonevalidation();
-                    proxy.isvalidsimple(value, function (result) {
-                        if (!result.Status.Success)
-                            e.target.data8_telephone_validation_result = true;
-                        else
-                            e.target.data8_telephone_validation_result = result.Result;
+                            e.target.data8_telephone_validation_result = result.Result.ValidationResult != 'Invalid';
                     });
                 }
                 else {
