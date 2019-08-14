@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>Data8_DataCaptureValidation</name>
+    <version>1.0.10</version>
+    <stability>stable</stability>
+    <license>Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Adds postcode lookup functionality for UK addresses to all address entry screens, telephone validation for UK and US telephone numbers and international email address validation.</summary>
+    <description>* Adds postcode lookup functionality to all address entry screens, speeding up the checkout process and improving the deliverability of parcels. Covers all UK addresses and degrades gracefully when a different country is selected.&amp;#xD;&#xD;
+* Adds extensive telephone number validation for all UK and North American telephone numbers and degrades gracefully when a different country is selected.&amp;#xD;&#xD;
+* Adds extensive international email address validation.</description>
+    <notes>Fixed error on customer address form.</notes>
+    <authors><author><name>Data8</name><user>data8_technical</user><email>technical@data-8.co.uk</email></author></authors>
+    <date>2014-05-08</date>
+    <time>10:43:01</time>
+    <contents><target name="magecommunity"><dir name="Data8"><dir name="DataCaptureValidation"><dir name="Block"><file name="Javascript.php" hash="16f9e4084dd2f20ca6588a39edcc1f0c"/></dir><file name="EmailValidationTypeList.php" hash="89910b62ec4efe9c4eada99b76d8b2cd"/><dir name="Helper"><file name="Data.php" hash="e8c6af1f98bf0f9640134b24dc642122"/></dir><file name="LicenseTypeList.php" hash="ddd66dd3149d083ecd69555bd4ba1a52"/><dir name="controllers"><file name="IndexController.php" hash="8d82912789ff1b1494aa56345ff5d7d9"/></dir><dir name="etc"><file name="config.xml" hash="1f1ce2961df39faeac18070051f01893"/><file name="system.xml" hash="c1a609fa83e13d2c1ccab80d3890f6a9"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="default"><dir name="default"><dir name="layout"><file name="Data8_DataCaptureValidation.xml" hash="506c38f100fa1cf2b8eda1f72b694810"/></dir><dir name="template"><dir name="data8"><dir name="datacapturevalidation"><file name="data8_javascript.phtml" hash="00ac46ea0ca8a082052d5dfe72aec3f5"/></dir></dir></dir></dir></dir></dir></target><target name="mageweb"><dir name="js"><dir name="Data8"><file name="address.js" hash="90f64822d1a012b4d102035355c0203c"/><file name="jquery-1.7.1.min.js" hash="2c57990a020cc3a35c4a603413d67a28"/><file name="magentoaddress.js" hash="d7f12f57dded224ccd9447010e8b8fbf"/><file name="validation.js" hash="473d41224831d7448ebcccd850b4c123"/></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Data8_DataCaptureValidation.xml" hash="8e6a2d12c438c6fed0d66e4fe8978b12"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Data8_DataCaptureValidation.csv" hash="845e7bce7a102df9aefb67abace15a1c"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

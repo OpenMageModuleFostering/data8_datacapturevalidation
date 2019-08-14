@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/Data8_DataCaptureValidation",
+    "type": "magento-module",
+    "license": "Open-Software-License-(OSL)",
+    "homepage": "",
+    "description": "Adds postcode lookup functionality for UK addresses to all address entry screens, telephone validation for UK and US telephone numbers and international email address validation.",
+    "authors": [
+    {
+        "name": "Data8",
+        "email": "technical@data-8.co.uk"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}
