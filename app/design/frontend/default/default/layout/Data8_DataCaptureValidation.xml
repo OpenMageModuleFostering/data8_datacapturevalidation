@@ -40,7 +40,7 @@
         <script>Data8/address.js</script>
       </action>
       <action method="addJs">
-        <script>Data8/magentoaddress.js</script>
+        <script>h</script>
       </action>
       <action method="addJs">
         <script>Data8/validation.js</script>
