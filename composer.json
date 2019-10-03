@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Data8_DataCaptureValidation",
+    "name": "openmage-module-fostering\/data8_datacapturevalidation",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Adds international address capture functionality to all address entry screens, international telephone number and email address validation.",
     "authors": [
